@@ -4,3 +4,5 @@ dist/
 .playwright-mcp/
 .claude/settings.local.json
 client/handwave-embed.js
+.DS_Store
+*.tsbuildinfo
