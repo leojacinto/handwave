@@ -1,0 +1,32 @@
+/**
+ * Application head CSS.
+ *
+ * Unlike tailwind.app.css (adopted into every component's shadow root via
+ * adoptedStyleSheets), this file is linked directly into the document
+ * <head> — see core/sdk/src/build-runtime-manifest/build-app-head-css.js.
+ * Use it for CSS that must be registered once, document-wide: most notably
+ * @font-face, which needs to apply to every shadow root without being
+ * duplicated into each one's adopted stylesheet.
+ *
+ * url(...) / @import references must be absolute (CDN, data: URI, or an
+ * already-served path) — you can leverage the ./public directory to serve
+ * fonts as seen in the example below. Supported font formats: woff, woff2,
+ * ttf, otf.
+ *
+ * To actually apply an imported/declared font, pair this with a
+ * --font-sans / --font-mono token override in
+ * tailwind.app.css (see the example there) — those tokens are what each
+ * component's shadow-scoped Tailwind sheet reads from.
+ */
+
+/* Example: register a custom font, then point the font tokens in
+tailwind.app.css at it to apply it app-wide.
+
+@font-face {
+  font-family: 'MyFont';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/aiux/handwave/public/fonts/MyFont.woff2) format('woff2');
+}
+*/

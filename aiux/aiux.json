@@ -1,0 +1,11 @@
+{
+  "name": "Handwave",
+  "basename": "handwave",
+  "landing": "/home",
+  "development": {
+    "token": ""
+  },
+  "build": {
+    "exclude": ["**/*.test.js", "**/test/**"]
+  }
+}

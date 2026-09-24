@@ -1,0 +1,50 @@
+{
+  "name": "handwave",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AIUX application: Handwave",
+  "scripts": {
+    "build": "now-sdk build",
+    "doctor": "aiux doctor",
+    "dev": "now-sdk run dev",
+    "deploy": "now-sdk install",
+    "deploy:reinstall": "now-sdk install --reinstall",
+    "lint": "eslint .",
+    "agent:skills": "node scripts/setup-agent-skills.mjs",
+    "postinstall": "node scripts/setup-agent-skills.mjs"
+  },
+  "dependencies": {
+    "@servicenow/aiux": "latest",
+    "lit": "^3.2.1"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.28.0",
+    "@babel/plugin-proposal-decorators": "^7.29.0",
+    "@eslint/js": "^9.39.0",
+    "@servicenow/eslint-plugin-aiux-a11y": "latest",
+    "@servicenow/eslint-plugin-aiux-app": "latest",
+    "@servicenow/eslint-plugin-aiux-i18n": "latest",
+    "@servicenow/eslint-plugin-aiux-ssr": "latest",
+    "@servicenow/eslint-plugin-aiux-style": "latest",
+    "@servicenow/agent-pack-aiux": "latest",
+    "@servicenow/agent-pack-horizon-design-knowledge": "latest",
+    "@servicenow/sdk": "4.12.2",
+    "eslint": "^9.0.0",
+    "globals": "^16.0.0"
+  },
+  "engines": {
+    "node": ">=24.14.1"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@parcel/watcher",
+      "@servicenow/aiux-components-condition-builder",
+      "@servicenow/aiux-document-viewer",
+      "@swc/core",
+      "core-js",
+      "isolated-vm",
+      "libxmljs2",
+      "sn-http-request"
+    ]
+  }
+}

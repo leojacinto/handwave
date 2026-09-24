@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/components/graphcanvas.tsx","./src/components/handoverlay.tsx","./src/components/hud.tsx","./src/data/aictkgclient.ts","./src/data/jevclient.ts","./src/data/kgtypes.ts","./src/lib/gesturecontroller.ts"],"version":"5.9.3"}

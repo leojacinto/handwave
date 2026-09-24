@@ -1,0 +1,38 @@
+/**
+ * Application Tailwind extensions.
+ *
+ * Merged into the app's Tailwind delta sheet at build time.
+ * Supported directives:
+ *
+ *   @source inline("...")     — additional class safelists
+ *   @layer utilities { ... }  — new and overriding utility classes
+ *
+ * Do NOT add @import "tailwindcss" here — the build entry already includes it.
+ * Do NOT add @theme { ... } here — it is stripped by the build process.
+ * 
+ * Note:
+ * Theme-level token overrides are also possible via theme.token_overrides
+ * Override precedence is theme < app: this app-level sheet is adopted above
+ * the base platform sheet, so any app-level override here wins over the same token 
+ * set at the theme level. Set app-level token overrides deliberately; they cannot be
+ * overridden by the theme.
+ */
+
+/* Example: declare a custom app layer above utilities so app overrides
+always win the cascade, even though the app delta sheet is adopted before
+the base platform sheet.
+
+@layer utilities, my-app;
+
+@layer my-app {
+  :host {
+    --my-app-button-bg: #007bff;
+    --my-font: 'MyFont';
+    --font-sans: var(--my-font);
+  }
+
+  .aiux-btn {
+    background-color: var(--my-app-button-bg);
+  }
+}
+*/

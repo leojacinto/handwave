@@ -1,0 +1,15 @@
+{
+  "scope": "x_snc_handwave",
+  "scopeId": "30a0e108cc8e4e3b95482b847bb2f287",
+  "name": "Handwave",
+  "metadataDir": "src/plugin-xmls",
+  "appOutputDir": "dist-metadata/app",
+  "packageSourceCodeOnInstance": true,
+  "staticContent": {
+    "assets": {
+      "./public/**": {
+        "publicPath": "[$config.aiux.basename]/public"
+      }
+    }
+  }
+}
